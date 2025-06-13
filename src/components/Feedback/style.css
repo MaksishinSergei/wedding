@@ -1,0 +1,297 @@
+.feedback {
+  margin-bottom: 50px;
+}
+.feedback__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.feedback__title {
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1s;
+  &:first-letter {
+    font-family: "Majestic", sans-serif;
+    font-size: 64px;
+    line-height: 28px;
+  }
+}
+.form__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form__subtitle {
+  text-align: center;
+  max-width: 470px;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transition-delay: 1.2s;
+}
+.form__fio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transition-delay: 1.4s;
+  &:before {
+    content: "Фамилия и имя";
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    padding: 5px;
+    z-index: 1;
+    background-color: #fff;
+  }
+}
+.input__fio {
+  outline: none;
+  padding: 15px;
+  min-width: 350px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #303030;
+  background-color: transparent;
+}
+.form__radio-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.radio__buttons-group {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 5px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transition-delay: 1.4s;
+}
+.radio__buttons-subtitle {
+  margin-bottom: 5px;
+}
+.form__textarea-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transition-delay: 1.4s;
+  &:before {
+    content: "В каком составе ждать";
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    padding: 5px;
+    z-index: 1;
+    background-color: #fff;
+  }
+}
+.form__text-area {
+  outline: none;
+  padding: 15px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #303030;
+  background-color: transparent;
+  resize: none;
+  &::placeholder {
+    color: gray;
+    opacity: 0.5;
+  }
+}
+.form__checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transition-delay: 1.4s;
+}
+.form__checkbox-wrapper .link__pdn {
+  text-decoration: underline;
+}
+.form__btn {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  padding: 15px 50px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.5s linear;
+  opacity: 0;
+  transform: translateY(10px);
+  will-change: transform, opacity;
+  transition-delay: 1.6s;
+  &:hover {
+    background-color: #303030;
+    border: 1px solid #ffffff;
+    color: #fff;
+  }
+  &:active {
+    background-color: #303030;
+    border: 1px solid #ffffff;
+    color: #fff;
+  }
+  &:focus {
+    background-color: #303030;
+    border: 1px solid #ffffff;
+    color: #fff;
+  }
+}
+.feedback__wrapper span {
+  opacity: 0;
+  color: red;
+  font-size: 15px;
+  line-height: 17px;
+}
+.form__fio-wrapper.required span,
+.form__radio-btn.required span,
+.form__checkbox-wrapper.required span {
+  opacity: 1;
+}
+.form__fio-wrapper.required .input__fio {
+  border: 1px solid red;
+}
+.form__fio-wrapper.required::before {
+  color: red;
+}
+.form__radio-btn.required .radio__buttons-subtitle {
+  color: red;
+}
+.end__title {
+  margin-top: 50px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1.8s;
+  &:first-letter {
+    font-family: "Majestic", sans-serif;
+    font-size: 64px;
+    line-height: 28px;
+  }
+  &:after {
+    content: "!";
+    font-size: 48px;
+  }
+}
+.feedback.visible .feedback__title,
+.feedback.visible .end__title {
+  opacity: 1;
+}
+.feedback.visible .form__subtitle,
+.feedback.visible .form__btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.feedback.visible .form__fio-wrapper,
+.feedback.visible .radio__buttons-group,
+.feedback.visible .form__textarea-wrapper,
+.feedback.visible .form__checkbox-wrapper {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (max-width: 580px) {
+  .form__subtitle {
+    max-width: 350px;
+  }
+  .input__fio {
+    min-width: 270px;
+  }
+}
+@media (max-width: 415px) {
+  .form__wrapper {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .form__wrapper span {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+  }
+  .feedback__title {
+    font-size: 16px;
+    &:first-letter {
+      font-size: 48px;
+    }
+  }
+  .form__subtitle {
+    max-width: 235px;
+  }
+  .input__fio {
+    min-width: 250px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .form__fio-wrapper {
+    &:before {
+      top: -13px;
+    }
+  }
+  .form__textarea-wrapper {
+    &:before {
+      top: -13px;
+    }
+  }
+  .form__text-area {
+    font-size: 12px;
+  }
+  .form__btn {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
+  .end__title {
+    font-size: 16px;
+    &:first-letter {
+      font-size: 48px;
+    }
+    &:after {
+      font-size: 32px;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .end__title {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    &:first-letter {
+      font-size: 32px;
+    }
+  }
+}

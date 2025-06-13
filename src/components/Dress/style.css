@@ -1,0 +1,304 @@
+.dress {
+  margin-bottom: 150px;
+}
+.dress__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dress__title {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1s;
+  &:first-letter {
+    font-family: "Majestic", sans-serif;
+    font-size: 64px;
+    line-height: 28px;
+  }
+}
+.dress__text {
+  max-width: 450px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.dress__text-1 {
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transform: translateY(10px);
+  transition-delay: 1.2s;
+}
+.dress__text-2 {
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transform: translateY(10px);
+  transition-delay: 1.4s;
+}
+.dress__text-3 {
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transform: translateY(10px);
+  transition-delay: 1.6s;
+}
+.dress__color {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 100px;
+}
+.dress__color-img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+}
+.color_1 {
+  transition-delay: 1.8s;
+}
+.color_2 {
+  transition-delay: 2s;
+}
+.color_3 {
+  transition-delay: 2.2s;
+}
+.dress__title-men,
+.dress__title-women {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  &:first-letter {
+    font-family: "Majestic", sans-serif;
+    font-size: 64px;
+    line-height: 28px;
+  }
+}
+.dress__title-men {
+  transition-delay: 2.4s;
+}
+.dress__title-women {
+  transition-delay: 3.4s;
+}
+.dress__men {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.dress__men .dress__men-img {
+  max-width: 270px;
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+}
+.dress__men .img_1 {
+  transform: translateX(-10px);
+  transition-delay: 2.6s;
+}
+.dress__men .img_2 {
+  transform: translateX(10px);
+  transition-delay: 2.8s;
+}
+.dress__men .img_3 {
+  transform: translateX(10px);
+  transition-delay: 3s;
+}
+.dress__men .img_4 {
+  transform: translateX(-10px);
+  transition-delay: 3.2s;
+}
+.dress__men-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.dress__men-col img {
+  border: 7px solid #ffffff;
+}
+.dress__women {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dress__women img {
+  border: 7px solid #ffffff;
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+}
+.dress__women .img_1 {
+  transform: translateX(-10px);
+  transition-delay: 3.6s;
+}
+.dress__women .img_2 {
+  transform: translateY(-10px);
+  transition-delay: 3.6s;
+}
+.dress__women .img_3 {
+  transition-delay: 3.6s;
+}
+.dress__women .img_4 {
+  transform: translateY(10px);
+  transition-delay: 3.6s;
+}
+.dress__women .img_5 {
+  transform: translateX(10px);
+  transition-delay: 3.6s;
+}
+.dress.visible .dress__title,
+.dress.visible .color_1,
+.dress.visible .color_2,
+.dress.visible .color_3,
+.dress.visible .dress__title-men,
+.dress.visible .dress__title-women,
+.dress.visible .dress__wrapper .dress__women .img_3 {
+  opacity: 1;
+}
+.dress.visible .dress__wrapper .dress__text .dress__text-1,
+.dress.visible .dress__text-2,
+.dress.visible .dress__text-3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dress.visible .dress__wrapper .dress__men .img_1,
+.dress.visible .dress__wrapper .dress__men .img_2,
+.dress.visible .dress__wrapper .dress__men .img_3,
+.dress.visible .dress__wrapper .dress__men .img_4 {
+  opacity: 1;
+  transform: translateX(0);
+}
+.dress.visible .dress__wrapper .dress__women .img_1,
+.dress.visible .dress__wrapper .dress__women .img_5 {
+  opacity: 1;
+  transform: translateX(0);
+}
+.dress.visible .dress__wrapper .dress__women .img_2,
+.dress.visible .dress__wrapper .dress__women .img_4 {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (max-width: 880px) {
+  .dress {
+    margin-bottom: 100px;
+  }
+  .dress__men .dress__men-img {
+    max-width: 200px;
+  }
+  .dress__women img {
+    max-width: 200px;
+  }
+  .dress__color .dress__color-img {
+    max-width: 75px;
+  }
+}
+@media (max-width: 680px) {
+  .dress__men .dress__men-img {
+    max-width: 150px;
+  }
+  .dress__women img {
+    max-width: 150px;
+  }
+  .dress__color {
+    gap: 20px;
+  }
+  .dress__color .dress__color-img {
+    max-width: 55px;
+  }
+}
+@media (max-width: 580px) {
+  .dress__men .dress__men-img {
+    max-width: 130px;
+  }
+  .dress__women img {
+    max-width: 130px;
+  }
+}
+@media (max-width: 486px) {
+  .dress__text {
+    max-width: 380px;
+  }
+  .dress__color {
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+  .dress__men .dress__men-img {
+    max-width: 130px;
+  }
+  .dress__women img {
+    max-width: 130px;
+  }
+}
+@media (max-width: 415px) {
+  .dress__title {
+    font-size: 16px;
+    &:first-letter {
+      font-size: 48px;
+    }
+  }
+  .dress__text {
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .dress__color .dress__color-img {
+    max-width: 45px;
+  }
+  .dress__title-men,
+  .dress__title-women {
+    font-size: 16px;
+    &:first-letter {
+      font-size: 48px;
+    }
+  }
+  .dress__men .dress__men-img {
+    max-width: 100px;
+    border: 3px solid #ffffff;
+  }
+  .dress__women img {
+    max-width: 100px;
+    border: 3px solid #ffffff;
+  }
+}
+@media (max-width: 350px) {
+  .dress__title {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    &:first-letter {
+      font-size: 32px;
+    }
+    &:after {
+      font-size: 22px;
+    }
+  }
+  .dress__title-men,
+  .dress__title-women {
+    font-size: 16px;
+    line-height: 18px;
+    &:first-letter {
+      font-size: 32px;
+    }
+  }
+  .dress__men .dress__men-img {
+    max-width: 85px;
+  }
+  .dress__women img {
+    max-width: 85px;
+  }
+  .dress__color .dress__color-img {
+    max-width: 35px;
+  }
+  .dress__text {
+    max-width: 240px;
+  }
+}

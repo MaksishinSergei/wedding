@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Majestic";
+  src: local("Majestic"), url("./fonts/Majestic_0.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Romul";
+  src: local("Romul"), url("./fonts/romul.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular"),
+    url("./fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #303030;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+.wrapper {
+  max-width: 100vw;
+}
+.title {
+  font-family: "Romul", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 28px;
+}
+.container {
+  width: 100%;
+  max-width: 1120px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media (max-width: 980px) {
+  .title {
+    font-size: 22px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 680px) {
+  .title {
+    font-size: 18px;
+    line-height: 12px;
+  }
+}
+@media (max-width: 486px) {
+  body {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .title {
+    font-size: 16px;
+    line-height: 12px;
+  }
+}
+@media (max-width: 415px) {
+  body {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .title {
+    font-size: 12px;
+    line-height: 10px;
+  }
 }

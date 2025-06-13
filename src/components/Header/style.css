@@ -1,0 +1,614 @@
+.header_logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  opacity: 0;
+  transition: opacity 0.7s 0.5s linear;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 60%;
+    right: 60%;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 3px;
+    transition: left 0.7s 0.5s linear;
+    transition-delay: 0.5s;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 60%;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 3px;
+    transition: right 0.7s 0.5s linear;
+    transition-delay: 0.5s;
+  }
+}
+.header_logo.visible {
+  opacity: 1;
+  &:before {
+    left: 25%;
+    right: 60%;
+  }
+  &:after {
+    left: 60%;
+    right: 25%;
+  }
+}
+.logo {
+  align-items: center;
+  margin: 0 20px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.header_title {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1s;
+  &:first-letter {
+    font-family: "Majestic", sans-serif;
+    font-size: 64px;
+    line-height: 28px;
+  }
+  &:after {
+    content: "!";
+    font-size: 48px;
+  }
+}
+.content.visible .header_title {
+  opacity: 1;
+}
+.bride_wrapper-text {
+  display: flex;
+  position: absolute;
+  left: 100px;
+  top: 185px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1.2s;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 35px;
+    height: 7px;
+    width: 7px;
+    background-color: #000000;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s 1s linear;
+    transition-delay: 1.2s;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 3px;
+    left: 40px;
+    right: 115%;
+    transition: right 1s 1s linear;
+    transition-delay: 1.4s;
+    z-index: 1;
+  }
+}
+.bride_wrapper-text .text_wrapper {
+  padding: 15px 0;
+}
+.groom_wrapper-text .text_wrapper {
+  padding: 15px 0;
+}
+
+.groom_wrapper-text {
+  display: flex;
+  position: absolute;
+  right: 130px;
+  bottom: 360px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1.4s;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 35px;
+    height: 7px;
+    width: 7px;
+    background-color: #000000;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s 1s linear;
+    transition-delay: 1.4s;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 3px;
+    left: 115%;
+    right: 40px;
+    z-index: 1;
+    transition: left 1s 1s linear;
+    transition-delay: 1.6s;
+  }
+}
+.groom_wrapper-text .text,
+.bride_wrapper-text .text {
+  font-size: 16px;
+  font-weight: 400;
+}
+.groom_wrapper-text {
+  text-align: right;
+}
+.groom_wrapper-text .question,
+.bride_wrapper-text .question {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.wheat-right {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.content.visible .groom_wrapper-text {
+  opacity: 1;
+  &:after {
+    left: -82%;
+  }
+  &:before {
+    opacity: 1;
+  }
+}
+.content.visible .bride_wrapper-text {
+  opacity: 1;
+  &:after {
+    right: -85%;
+  }
+  &:before {
+    opacity: 1;
+  }
+}
+.main_image {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1.4s 1.4s linear;
+  transition-delay: 0.5s;
+}
+.second_image {
+  z-index: 3;
+  position: absolute;
+  left: 150px;
+  bottom: 150px;
+  transform: rotate(-15deg);
+  border: 7px solid #ffffff;
+  border-radius: 150px;
+  opacity: 0;
+  transition: opacity 1.6s 1.6s linear;
+  transition-delay: 0.7s;
+}
+.content.visible .main_image,
+.content.visible .second_image {
+  opacity: 1;
+}
+.header_subtitle {
+  text-align: center;
+  margin-top: 55px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1.8s;
+  &:first-letter {
+    font-family: "Majestic", sans-serif;
+    font-size: 64px;
+    line-height: 28px;
+  }
+  &:after {
+    content: "!";
+    font-size: 48px;
+  }
+}
+.content.visible .header_subtitle {
+  opacity: 1;
+}
+.arrow {
+  margin-top: 25px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  animation: fadeIn 1s forwards, bounce 2s 1s infinite ease-in-out;
+  transition-delay: 2s;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}
+.content.visible .arrow {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 1100px) {
+  .logo {
+    max-width: 85px;
+  }
+  .header_logo.visible {
+    &:before {
+      left: 30%;
+      height: 1px;
+    }
+    &:after {
+      right: 30%;
+      height: 1px;
+    }
+  }
+  .main_image {
+    max-width: 270px;
+  }
+  .second_image {
+    max-width: 230px;
+    left: 270px;
+    border: 5px solid #ffffff;
+  }
+  .bride_wrapper-text {
+    left: 200px;
+    top: 125px;
+  }
+  .content.visible .bride_wrapper-text {
+    &:after {
+      right: -55%;
+    }
+  }
+  .groom_wrapper-text {
+    right: 210px;
+    bottom: 320px;
+  }
+  .content.visible .groom_wrapper-text {
+    &:after {
+      left: -70%;
+    }
+  }
+  .groom_wrapper-text .question,
+  .bride_wrapper-text .question {
+    font-size: 18px;
+  }
+}
+@media (max-width: 980px) {
+  .main_image {
+    max-width: 180px;
+  }
+  .second_image {
+    max-width: 150px;
+    left: 280px;
+    border: 5px solid #ffffff;
+  }
+  .bride_wrapper-text .text_wrapper,
+  .groom_wrapper-text .text_wrapper {
+    padding: 25px 0;
+  }
+  .bride_wrapper-text {
+    left: 200px;
+    top: 80px;
+    &:after {
+      height: 1px;
+      bottom: -3px;
+    }
+    &:before {
+      height: 5px;
+      width: 5px;
+    }
+  }
+  .groom_wrapper-text {
+    &:after {
+      height: 1px;
+      bottom: -3px;
+    }
+    &:before {
+      height: 5px;
+      width: 5px;
+    }
+  }
+  .content.visible .bride_wrapper-text {
+    &:after {
+      right: -45%;
+    }
+  }
+  .groom_wrapper-text {
+    right: 210px;
+    bottom: 270px;
+  }
+  .content.visible .groom_wrapper-text {
+    &:after {
+      left: -70%;
+    }
+  }
+  .groom_wrapper-text .question,
+  .bride_wrapper-text .question {
+    font-size: 16px;
+  }
+  .groom_wrapper-text .text,
+  .bride_wrapper-text .text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 880px) {
+  .second_image {
+    left: 230px;
+    border: 3px solid #ffffff;
+  }
+  .header .content .wheat {
+    max-height: 70px;
+  }
+  .bride_wrapper-text .text_wrapper,
+  .groom_wrapper-text .text_wrapper {
+    padding: 15px 0;
+  }
+  .bride_wrapper-text {
+    left: 120px;
+    top: 75px;
+    &:after {
+      height: 1px;
+      bottom: -1px;
+      left: 30px;
+    }
+    &:before {
+      height: 5px;
+      width: 5px;
+      bottom: -3px;
+      left: 27px;
+    }
+  }
+  .groom_wrapper-text {
+    &:after {
+      height: 1px;
+      bottom: -1px;
+      right: 30px;
+    }
+    &:before {
+      height: 5px;
+      width: 5px;
+      bottom: -3px;
+      right: 27px;
+    }
+  }
+  .content.visible .bride_wrapper-text {
+    &:after {
+      right: -85%;
+    }
+  }
+  .groom_wrapper-text {
+    right: 150px;
+    bottom: 270px;
+  }
+  .content.visible .groom_wrapper-text {
+    &:after {
+      left: -85%;
+    }
+  }
+  .groom_wrapper-text .question,
+  .bride_wrapper-text .question {
+    font-size: 16px;
+  }
+  .groom_wrapper-text .text,
+  .bride_wrapper-text .text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 680px) {
+  .second_image {
+    left: 140px;
+    border: 3px solid #ffffff;
+  }
+  .bride_wrapper-text {
+    left: 50px;
+    top: 75px;
+  }
+  .groom_wrapper-text {
+    right: 70px;
+    bottom: 270px;
+  }
+}
+@media (max-width: 580px) {
+  .main_image {
+    max-width: 150px;
+  }
+  .second_image {
+    max-width: 120px;
+    left: 120px;
+    border: 3px solid #ffffff;
+  }
+  .bride_wrapper-text {
+    left: 45px;
+    top: 60px;
+  }
+  .groom_wrapper-text {
+    right: 50px;
+    bottom: 245px;
+  }
+  .content.visible .bride_wrapper-text {
+    &:after {
+      right: -60%;
+    }
+  }
+  .bride_wrapper-text .text_wrapper,
+  .groom_wrapper-text .text_wrapper {
+    padding: 22px 0;
+  }
+  .groom_wrapper-text .question,
+  .bride_wrapper-text .question {
+    font-size: 14px;
+  }
+  .groom_wrapper-text .text,
+  .bride_wrapper-text .text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 486px) {
+  .second_image {
+    left: 90px;
+  }
+  .bride_wrapper-text {
+    left: 20px;
+    top: 60px;
+  }
+  .groom_wrapper-text {
+    right: 30px;
+    bottom: 245px;
+  }
+}
+@media (max-width: 415px) {
+  .header_logo.visible {
+    &:before {
+      left: 15%;
+      right: 255px;
+      height: 1px;
+    }
+    &:after {
+      right: 15%;
+      left: 255px;
+      height: 1px;
+    }
+  }
+  .main_image {
+    max-width: 120px;
+  }
+  .second_image {
+    max-width: 100px;
+    left: 75px;
+    border: 2px solid #ffffff;
+  }
+  .groom_wrapper-text .question,
+  .bride_wrapper-text .question {
+    font-size: 12px;
+  }
+  .groom_wrapper-text .text,
+  .bride_wrapper-text .text {
+    font-size: 10px;
+  }
+  .header .content .wheat {
+    max-height: 50px;
+  }
+  .bride_wrapper-text .text_wrapper,
+  .groom_wrapper-text .text_wrapper {
+    padding: 15px 0;
+  }
+  .bride_wrapper-text {
+    left: 0;
+    top: 60px;
+    &:before {
+      height: 4px;
+      width: 4px;
+      bottom: 5px;
+      left: 20px;
+    }
+    &:after {
+      height: 1px;
+      bottom: 6px;
+      left: 23px;
+    }
+  }
+  .content.visible .bride_wrapper-text {
+    &:after {
+      right: -70%;
+    }
+  }
+  .groom_wrapper-text {
+    right: 10px;
+    bottom: 225px;
+    &:before {
+      height: 4px;
+      width: 4px;
+      bottom: 5px;
+      right: 20px;
+    }
+    &:after {
+      height: 1px;
+      bottom: 6px;
+      right: 23px;
+    }
+  }
+  .header_title {
+    font-size: 16px;
+    &:first-letter {
+      font-size: 48px;
+    }
+    &:after {
+      font-size: 32px;
+    }
+  }
+  .header_subtitle {
+    &:first-letter {
+      font-size: 32px;
+    }
+    &:after {
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .header_logo.visible {
+    &:before {
+      left: 15%;
+      right: 65%;
+      height: 1px;
+    }
+    &:after {
+      right: 15%;
+      left: 65%;
+      height: 1px;
+    }
+  }
+  .logo {
+    max-width: 75px;
+  }
+  .groom_wrapper-text .question,
+  .bride_wrapper-text .question {
+    font-size: 10px;
+  }
+  .groom_wrapper-text .text,
+  .bride_wrapper-text .text {
+    font-size: 8px;
+  }
+  .bride_wrapper-text {
+    left: -5px;
+  }
+  .groom_wrapper-text {
+    right: 0;
+  }
+  .second_image {
+    left: 45px;
+  }
+  .header_subtitle {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    &:first-letter {
+      font-size: 32px;
+    }
+    &:after {
+      font-size: 22px;
+    }
+  }
+}

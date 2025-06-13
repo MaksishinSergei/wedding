@@ -1,0 +1,212 @@
+.timing {
+  margin-bottom: 150px;
+}
+.timing__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.timing__title {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1s;
+  &:first-letter {
+    font-family: "Majestic", sans-serif;
+    font-size: 64px;
+    line-height: 28px;
+  }
+}
+.timing__list .item-1 {
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1.2s;
+  &:before {
+    content: "00:00 - ";
+    font-family: "Romul", sans-serif;
+    font-size: 22px;
+  }
+}
+.timing__list .item-2 {
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1.4s;
+  &:before {
+    content: "00:00 - ";
+    font-family: "Romul", sans-serif;
+    font-size: 22px;
+  }
+}
+.timing__list .item-3 {
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1.6s;
+  &:before {
+    content: "00:00 - ";
+    font-family: "Romul", sans-serif;
+    font-size: 22px;
+  }
+}
+.timing__list .item-4 {
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1.8s;
+  &:before {
+    content: "00:00 - ";
+    font-family: "Romul", sans-serif;
+    font-size: 22px;
+  }
+}
+.timing__list .mirror {
+  transform: scale(-1, 1);
+}
+.timing__list .wheat-item {
+  position: relative;
+  margin-bottom: 35px;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    top: 155%;
+    bottom: -30px;
+    background-color: #000000;
+    border-radius: 3px;
+    left: 7px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    bottom: -33px;
+    background-color: #000000;
+    border-radius: 3px;
+    left: 5px;
+  }
+}
+.timing__list .wheat-1 {
+  &:before {
+    transition: top 1s 1s linear;
+    transition-delay: 2.8s;
+  }
+  &:after {
+    opacity: 0;
+    transition: opacity 1s 1s linear;
+    transition-delay: 2.4s;
+  }
+}
+.timing__list .wheat-2 {
+  &:before {
+    transition: top 1s 1s linear;
+    transition-delay: 2.6s;
+  }
+  &:after {
+    opacity: 0;
+    transition: opacity 1s 1s linear;
+    transition-delay: 2.2s;
+  }
+}
+.timing__list .wheat-3 {
+  &:before {
+    transition: top 1s 1s linear;
+    transition-delay: 2.4s;
+  }
+  &:after {
+    opacity: 0;
+    transition: opacity 1s 1s linear;
+    transition-delay: 2s;
+  }
+}
+.wheat-1 .timing__list-image {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transition-delay: 3.8s;
+}
+.wheat-2 .timing__list-image {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transition-delay: 3.6s;
+}
+.wheat-3 .timing__list-image {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transition-delay: 3.4s;
+}
+.timing__wrapper.visible .timing__title,
+.timing__wrapper.visible .item-1,
+.timing__wrapper.visible .item-2,
+.timing__wrapper.visible .item-3,
+.timing__wrapper.visible .item-4 {
+  opacity: 1;
+}
+.timing__wrapper.visible .timing__list-image {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timing__wrapper.visible .wheat-item {
+  &:before {
+    top: 95%;
+  }
+  &:after {
+    opacity: 1;
+  }
+}
+@media (max-width: 880px) {
+  .timing {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 680px) {
+  .timing__list .item-1,
+  .timing__list .item-2,
+  .timing__list .item-3,
+  .timing__list .item-4 {
+    font-size: 20px;
+    &:before {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 415px) {
+  .timing__title {
+    margin-top: 50px;
+    font-size: 16px;
+    &:first-letter {
+      font-size: 48px;
+    }
+  }
+  .timing__list .item-1,
+  .timing__list .item-2,
+  .timing__list .item-3,
+  .timing__list .item-4 {
+    font-size: 18px;
+    &:before {
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .timing__title {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    &:first-letter {
+      font-size: 32px;
+    }
+    &:after {
+      font-size: 22px;
+    }
+  }
+}

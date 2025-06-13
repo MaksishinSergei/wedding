@@ -1,0 +1,130 @@
+.details {
+  margin-bottom: 150px;
+}
+.details__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.details__title {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: opacity 1s 1s linear;
+  transition-delay: 1s;
+  &:first-letter {
+    font-family: "Majestic", sans-serif;
+    font-size: 64px;
+    line-height: 28px;
+  }
+}
+.details__text-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  max-width: 470px;
+}
+
+.details__text-1 {
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transform: translateY(10px);
+  transition-delay: 1.2s;
+}
+.details__text-2 {
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transform: translateY(10px);
+  transition-delay: 1.4s;
+}
+.details__text-letter {
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transform: translateY(10px);
+  transition-delay: 1.2s;
+  width: 150px;
+  height: 150px;
+}
+.details__text-bottle {
+  opacity: 0;
+  transition: all 1s ease-out;
+  will-change: transform, opacity;
+  transform: translateY(10px);
+  transition-delay: 1.2s;
+  width: 150px;
+  height: 150px;
+}
+.details.visible .details__title {
+  opacity: 1;
+}
+.details.visible .details__text-wrap .details__text-1,
+.details.visible .details__text-wrap .details__text-2,
+.details.visible .details__text-wrap .details__text-letter,
+.details.visible .details__text-wrap .details__text-bottle {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 880px) {
+  .details {
+    margin-bottom: 100px;
+  }
+  .details__text-letter {
+    width: 100px;
+    height: 100px;
+  }
+  .details__text-bottle {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 680px) {
+  .details__text-wrap {
+    max-width: 400px;
+  }
+}
+@media (max-width: 580px) {
+  .details__text-wrap {
+    max-width: 300px;
+  }
+  .details__text-1,
+  .details__text-2 {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 415px) {
+  .details {
+    margin-bottom: 50px;
+  }
+  .details__title {
+    font-size: 16px;
+    margin-bottom: 30px;
+    &:first-letter {
+      font-size: 48px;
+    }
+  }
+  .details__text-wrap {
+    max-width: 210px;
+  }
+  .details__text-1,
+  .details__text-2 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .details__text-letter {
+    width: 75px;
+    height: 75px;
+  }
+  .details__text-bottle {
+    width: 75px;
+    height: 75px;
+  }
+}

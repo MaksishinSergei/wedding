@@ -64,7 +64,7 @@ export default function Feedback() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/send-to-telegram",
+        "http://217.114.13.140:3001/send-to-telegram",
         formData
       );
 
